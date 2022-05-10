@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio Naomie JASOR</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/7e148c073d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+        <a href="index.html"><img src="./logoNaomieJASOR.png" alt="Logo de NaomieJASOR qui est constitué d'un cercle avec les lettres N et J à l'intérieur" 
+          class="logo"></a>
+      <div class="background-two link-container">
+        <a class="link-two" href="index.html">Curriculum Vitae</a>
+      </div>
+      <div class="background-three link-container">
+        <a class="link-three" href="index.html">Portfolio</a>
+      </div>
+      <div class="background-one">
+        <div class="link-container">
+          <a class="link-one" href="index.html">Compétences</a>
+        </div>
+      </div>
+      <div class="background-four link-container">
+        <a class="link-four" href="index.html">Parcours scolaire</a>
+      </div>
+      <div class="background-five link-container">
+        <a class="link-five" href="index.html">Contact</a>
+      </div>
+   </div>
+  </header>
+
+<div class="portfolio">
+  <h2>PLugging pour afficher la liste des de tous les documents d'un patient</h2>
+  <div class="slide-container">
+    <div class="custom-slider fade">
+        <div class="slide-index">1 / 2</div>
+        <img class="slide-img" src="./listeDesDocuments7.png">
+    </div>
+    <div class="custom-slider fade">
+        <div class="slide-index">2 / 2</div>
+        <img class="slide-img" src="./listeDesDocuments8.png">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<div class="slide-dot">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+<div class="clientNewMargin">
+  <p> <b>Client: </b>TMM-Software</p> 
+  <p> <b>Type: </b>Developpement web</p>
+  <p> <b>Année: </b>2022</p>
+  <p><b>Technologie: </b> Javascript, VueJS, Quasar</p>  
+  <p> L'objectif est la création d'une page web pour l'affichage de documents pour un patient</p>
+</div>
+          
+</div>
+</body>
+</html>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("custom-slider");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
