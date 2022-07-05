@@ -5,12 +5,31 @@
   <meta charset="utf-8">
   <title>Portfolio Naomie JASOR</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./responsive.css">
   <script src="https://kit.fontawesome.com/7e148c073d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+  <div class="loader">
+    <span class="letter">C</span>
+    <span class="letter">H</span>
+    <span class="letter">A</span>
+    <span class="letter">R</span>
+    <span class="letter">G</span>
+    <span class="letter">E</span>
+    <span class="letter">M</span>
+    <span class="letter">E</span>
+    <span class="letter">N</span>
+    <span class="letter">T</span>
+  </div>
+
   <header>
-    <div class="container">
+    <div class="toggle">
+      <i class="fa-solid fa-bars open"></i>
+      <i class="fa-solid fa-xmark close"></i>
+    </div>
+    <div id="container" class="container">
           <a href="index.html"><img src="./logoNaomieJASOR.png" alt="Logo de NaomieJASOR qui est constitué d'un cercle avec les lettres N et J à l'intérieur" 
             class="logo"></a>
       <div class="background-two link-container">
@@ -27,14 +46,13 @@
       <div class="background-four link-container">
         <a class="link-four" href="#cursus">Parcours scolaire</a>
       </div>
-      <div class="background-five link-container">
-        <a class="link-five" href="#contact">Contact</a>
-      </div>
    </div>
   </header>
 
   <div class="partOne">
-    <iframe src='https://my.spline.design/macbookprocopy-62018bc0037dc273c98594de0046dc13/' frameborder='0' width='100%' height='100%'></iframe>    
+    <div class="laptop-image"> 
+      <img src="./imgLaptop.png" alt="Image d'un ordinateur portable rose">
+    </div>
     <div class="naomie">
       <h3>I'm Naomie JASOR, <br> <span>Future web developer</span></h3>
       </div>
@@ -49,15 +67,18 @@
          <hr>
     <div class="futurJob">
       <p> Nom : Naomie JASOR</p>
-      <p class="age"> Age : 19 ans</p>
-      <p> Futur Job : Développeuse web </p>
+      <p> Age : 19 ans</p>
+      <p> Futur Job : Développeuse web</p>
       <p> Ville : Valence</p>
     </div>
     <a href="./cvJasorNaomie.pdf" download="cvJasorNaomie.pdf">
       <button><i class="fa-solid fa-download"></i>Télécharger mon CV</button>
     </a>
   </div>
-  <img src="./naoPicture.png" alt="Photo de Naomie JASOR">
+  <div class="responsive-image-Naomie">
+     <img src="./naoPicture.png" alt="Photo de Naomie JASOR">
+  </div>
+ 
 </div>
 
 
@@ -97,11 +118,11 @@
 
 
     <div class="container-img">
-      <a href="./changePassword.html">
-        <img src="./changeMDP.png"/>
+      <a href="./authentification.html">
+        <img src="./dashboardNew10.png"/>
         <div class="infos-hover">
           <i class="fa fa-eye"></i>
-          <p>Authentification généralisé</p>
+          <p>Dashboard Authentification centralisée</p>
       </div>
       </a>
     </div>
@@ -111,7 +132,7 @@
         <img src="./EditProfile.png"/>
         <div class="infos-hover">
           <i class="fa fa-eye"></i>
-          <p>Authentification généralisé</p>
+          <p>Authentification centralisée</p>
       </div>
       </a>
     </div>
@@ -126,8 +147,8 @@
       </a>
     </div>
   </div>
-  <h2>Compétences techniques</h2>
-<div id="competence" class="mesCompetences">
+  <h2 id="competence">Compétences techniques</h2>
+<div class="mesCompetences">
   <aside class="right">
   <h3><i class="fa-solid fa-people-group"></i>Gestion de projet</h3>
     <li>Plannification, conception de documents techniques</li>
@@ -199,39 +220,6 @@
 </div>
 
 </div>
-      <div id="contact" class="screen-body">
-        <div class="screen-body-item left">
-          <div class="app-title">
-            <span>CONTACTEZ- MOI</span>
-          </div>
-        </div>
-        <div class="screen-body-item">
-          <form action="#" method="post">
-            <div class="app-form-group message">
-              <label for="nom">Votre prénom</label>
-              <input class="app-form-control" type="text" id="nom" name="nom" placeholder="Julie" required>
-            </div>
-            <div class="app-form-group message">
-              <label for="nom">Votre nom</label>
-              <input class="app-form-control" type="text" id="nom" name="nom" placeholder="Martin" required>
-            </div>
-            <div class="app-form-group message">
-              <label for="email">Votre adresse mail</label>
-              <input class="app-form-control" type="email" id="email" name="email" placeholder="monadresse@mail.com" required>
-            </div>
-            <div class="app-form-group message">
-              <label for="message">Votre message</label>
-              <textarea class="app-form-control" id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
-            </div>
-          <div class="app-form-group message">
-            <button class="app-form-button disable" type="submit">Envoyer</button>
-            <button class="app-form-button" type="reset">Annuler</button>
-          </div>
-        </form>
-        </div>
-      </div>
-
-
 
 <!-- footer start -->
 <footer>
@@ -240,7 +228,7 @@
       <div class="logo_footer">
         <a href="index.html">
           <img src="./logoNaomieJASOR.png" alt="Logo de NaomieJASOR qui est constitué d'un cercle avec les lettres N et J à l'intérieur" 
-          class="logo"> 
+          class="footer-image"> 
       </a>
       </div>
 
@@ -254,5 +242,6 @@
 </footer>
 <!-- footer end -->
 
+<script src="app.js"></script>
 </body>
 </html>
